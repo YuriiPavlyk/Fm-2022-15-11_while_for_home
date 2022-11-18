@@ -1,4 +1,3 @@
-
 // Запитувати у користувача число до тих пір, доки воно не буде більше 15 і менше 35 і кратне 6 (18,24,30 підходить)
 // В користувача є 3 спроби
 
@@ -20,4 +19,16 @@ while (true) {
   }
 }
 
-
+for (let i = 0; i < 3; i++) {
+  const userInputNumber = prompt("Enter number");
+  if (
+    (userInputNumber > 15) & (userInputNumber < 35) &&
+    userInputNumber % 6 === 0
+  ) {
+    console.log(userInputNumber);
+    break;
+  }
+  if (i < 3) {
+    console.log("error");
+  }
+}
